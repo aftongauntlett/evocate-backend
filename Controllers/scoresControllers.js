@@ -1,4 +1,4 @@
-var db = require("../models");
+var db = require("../Models");
 
 module.exports = {
   findAll: function (req, res, next) {
@@ -10,12 +10,10 @@ module.exports = {
   },
 
   create: function (req, res, next) {
-
-      console.log(req.body);
-      db.Score.create(req.body).then(function (result) {
-        res.json({ result: "success", data: result });
-      });
-
+    console.log(req.body);
+    db.Score.create(req.body).then(function (result) {
+      res.json({ result: "success", data: result });
+    });
   },
 
   update: function (req, res, next) {
